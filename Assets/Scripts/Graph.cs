@@ -1,7 +1,21 @@
 using UnityEngine;
 
+/// <summary>  
+/// This class is here to generate a graph using the CPU.
+/// </summary>
+
 public class Graph : MonoBehaviour
 {
+    #region Constant Fields
+
+    #endregion
+
+    #region Static Fields
+
+    #endregion
+
+    #region Fields
+
     [SerializeField]
     Transform pointPrefab;
 
@@ -26,6 +40,22 @@ public class Graph : MonoBehaviour
     bool transitioning;
 
     FunctionLibrary.FunctionName transitionFunction;
+
+    #endregion
+
+    #region Events and Delegates
+
+    #endregion
+
+    #region Callbacks
+
+    #endregion
+
+    #region Constructors
+
+    #endregion
+
+    #region LifeCycle Methods
 
     void Awake()
     {
@@ -72,6 +102,22 @@ public class Graph : MonoBehaviour
             UpdateFunction();
         }
     }
+
+    #endregion
+
+    #region Public Methods
+
+    #endregion
+
+    #region Internal Methods
+
+    #endregion
+
+    #region Protected Methods
+
+    #endregion
+
+    #region Private Methods
 
     void PickNextFunction()
     {
@@ -127,4 +173,10 @@ public class Graph : MonoBehaviour
             points[i].localPosition = FunctionLibrary.Morph(u, v, time, from, to, progress);
         }
     }
+
+    #endregion
+
+    #region Nested Types
+
+    #endregion
 }

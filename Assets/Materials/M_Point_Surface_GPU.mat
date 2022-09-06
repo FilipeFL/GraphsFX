@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Point Surface
-  m_Shader: {fileID: 4800000, guid: 0b9ac115046b07344a5d72361c5836c5, type: 3}
+  m_Name: M_Point_Surface_GPU
+  m_Shader: {fileID: 4800000, guid: 595e3c106a1da6c468412bfdebb88b5d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

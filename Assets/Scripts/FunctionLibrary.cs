@@ -3,20 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.Mathf;
 
+/// <summary>  
+/// This class is used to set new functions to visualize in the graph using mathmetical principles.
+/// </summary>
+
 public static class FunctionLibrary
-{
-    public delegate Vector3 Function(float u, float v, float t);
+{    
+    #region Constant Fields
+
+    #endregion
+
+    #region Static Fields
+
+    public static int FunctionCount => functions.Length;
+
+    #endregion
+
+    #region Fields
 
     public enum FunctionName {Wave, MultiWave, Ripple, Sphere, Torus}
 
     static Function[] functions = {Wave, MultiWave, Ripple, Sphere, Torus};
 
-    public static int FunctionCount => functions.Length;
+    #endregion
+
+    #region Events and Delegates
+
+    public delegate Vector3 Function(float u, float v, float t);
+
+    #endregion
+
+    #region Callbacks
+
+    #endregion
+
+    #region Constructors
+
+    #endregion
+
+    #region LifeCycle Methods
+
+    #endregion
+
+    #region Public Methods
 
     public static Function GetFunction (FunctionName name) => functions[(int)name];
-
     public static FunctionName GetNextFunctionName (FunctionName name) => (int)name < functions.Length - 1 ? name + 1 : 0;
-
     public static FunctionName GetRandomFunctionNameOtherThan (FunctionName name)
     {
         var choice = (FunctionName) Random.Range(1, functions.Length);
@@ -91,4 +123,22 @@ public static class FunctionLibrary
 
         return p;
     }
+
+    #endregion
+
+    #region Internal Methods
+
+    #endregion
+
+    #region Protected Methods
+
+    #endregion
+
+    #region Private Methods
+
+    #endregion
+
+    #region Nested Types
+
+    #endregion
 }

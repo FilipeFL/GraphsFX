@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Point URP GPU
+  m_Name: M_Point_URP_GPU
   m_Shader: {fileID: -6465566751694194690, guid: c2d30bfa6999a7e4aa6eff42a41012b6, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

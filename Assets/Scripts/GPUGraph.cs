@@ -1,8 +1,18 @@
 using UnityEngine;
 
+/// <summary>  
+/// This class is here to generate a graph using the GPU.
+/// </summary>
+
 public class GPUGraph : MonoBehaviour {
 
+    #region Constant Fields
+
     const int maxResolution = 1000;
+
+    #endregion
+
+    #region Static Fields
 
     static readonly int
     positionsId = Shader.PropertyToID("_Positions"),
@@ -10,6 +20,10 @@ public class GPUGraph : MonoBehaviour {
     stepId = Shader.PropertyToID("_Step"),
     timeId = Shader.PropertyToID("_Time"),
     transitionProgressId = Shader.PropertyToID("_TransitionProgress");
+
+    #endregion
+
+    #region Fields
 
     [SerializeField]
     ComputeShader computeShader;
@@ -41,6 +55,38 @@ public class GPUGraph : MonoBehaviour {
     FunctionLibrary.FunctionName transitionFunction;
 
     ComputeBuffer positionsBuffer;
+
+    #endregion
+
+    #region Events and Delegates
+
+    #endregion
+
+    #region Callbacks
+
+    #endregion
+
+    #region Constructors
+
+    #endregion
+
+    #region LifeCycle Methods
+
+    #endregion
+
+    #region Public Methods
+
+    #endregion
+
+    #region Internal Methods
+
+    #endregion
+
+    #region Protected Methods
+
+    #endregion
+
+    #region Private Methods
 
     void OnEnable () {
         positionsBuffer = new ComputeBuffer(maxResolution * maxResolution, 3 * 4);
@@ -99,8 +145,12 @@ public class GPUGraph : MonoBehaviour {
         material.SetBuffer(positionsId, positionsBuffer);
         material.SetFloat(stepId, step);
         var bounds = new Bounds(Vector3.zero, Vector3.one * (2f + 2f / resolution));
-        Graphics.DrawMeshInstancedProcedural(
-                mesh, 0, material, bounds, resolution * resolution
-        );
+        Graphics.DrawMeshInstancedProcedural(mesh, 0, material, bounds, resolution * resolution);
     }
+
+    #endregion
+
+    #region Nested Types
+
+    #endregion
 }

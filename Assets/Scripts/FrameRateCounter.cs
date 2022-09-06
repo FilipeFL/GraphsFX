@@ -3,8 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>  
+/// This class is setting the frame reate counter that is on display in real-time.
+/// </summary>
+
 public class FrameRateCounter : MonoBehaviour
 {
+    #region Constant Fields
+
+    #endregion
+
+    #region Static Fields
+
+    #endregion
+
+    #region Fields
+
     [SerializeField]
     TextMeshProUGUI display;
 
@@ -19,6 +33,22 @@ public class FrameRateCounter : MonoBehaviour
     int frames;
 
     float duration, bestDuration = float.MaxValue, worstDuration;
+
+    #endregion
+
+    #region Events and Delegates
+
+    #endregion
+
+    #region Callbacks
+
+    #endregion
+
+    #region Constructors
+
+    #endregion
+
+    #region LifeCycle Methods
 
     void Update()
     {
@@ -57,4 +87,26 @@ public class FrameRateCounter : MonoBehaviour
             worstDuration = 0f;
         }
     }
+
+    #endregion
+
+    #region Public Methods
+
+    #endregion
+
+    #region Internal Methods
+
+    #endregion
+
+    #region Protected Methods
+
+    #endregion
+
+    #region Private Methods
+
+    #endregion
+
+    #region Nested Types
+
+    #endregion
 }
